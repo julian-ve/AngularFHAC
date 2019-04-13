@@ -6,9 +6,13 @@
 </div>
 
 <h2>Pictures:</h2>
-<ul *ngFor="let picture of pictures.photos">
-  <li><img src="{{picture.img_src}}"></li>
+<ul *ngFor="let image of images.photos">
+  <li><a (click)="showImage(image);"><img src="{{image.img_src}}"></a></li>
 </ul>
 
+<div class="row" id="overlay" (click)="hideOverlay()">
+  <div class="column left"><img class="overlay_img" [src]="currentImage.img_src"></div>
+  <div class="column overlay_text right">foo</div>
+</div>
 
 <router-outlet></router-outlet>
