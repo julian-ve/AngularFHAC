@@ -5,6 +5,23 @@
   </h1>
 </div>
 
+<hr>
+
+<div class="options">
+  Kamera: <select>
+    <option value="FHAZ">Front Hazard Avoidance Camera</option>
+    <option value="NAVCAM">Navigation Camera</option>
+    <option value="MAST">Mast Camera</option>
+    <option value="CHEMCAM">Chemistry and Camera Complex</option>
+    <option value="MAHLI">Mars Hand Lens Imager</option>
+    <option value="MARDI">Mars Descent Imager</option>
+    <option value="RHAZ">Rear Hazard Avoidance Camera</option>
+  </select>   |   Datum:
+  <input type="date" value="2019-04-07">
+</div>
+
+<hr>
+
 <div class="preview">
   <div class="gallery" *ngFor="let image of images.photos" (click)="showImage(image)">
       <img [src]="image.img_src" style="max-width: 600px" height="400">
