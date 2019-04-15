@@ -12,7 +12,28 @@
 
 <div class="row" id="overlay" (click)="hideOverlay()">
   <div class="column left"><img class="overlay_img" [src]="currentImage.img_src"></div>
-  <div class="column overlay_text right">foo</div>
+  <div class="column overlay_text right">
+    <table>
+      <tr>
+        <td>Rover:</td>
+        <td>{{currentImage.rover.name}}</td>
+      </tr>
+      <tr>
+        <td>Kamera:</td>
+        <td>{{currentImage.camera.full_name}}</td>
+      </tr>
+      <tr>
+        <td>Aufnahmedatum:</td>
+        <td>{{currentImage.earth_date}}</td>
+      </tr>
+      <tr>
+        <td>Gelandet am:</td>
+        <td>{{currentImage.rover.landing_date}}</td>
+      </tr>
+    </table>
+    <br>
+    <i>Dies ist eines von {{currentImage.rover.total_photos}} Fotos von {{currentImage.rover.name}}.</i>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

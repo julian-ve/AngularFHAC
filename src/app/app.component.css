@@ -19,7 +19,11 @@
 .overlay_text {
   top: 20%;
   color: white;
+  font-family: sans-serif;
+}
 
+td:first-child {
+  font-weight: bold;
 }
 
 .column {

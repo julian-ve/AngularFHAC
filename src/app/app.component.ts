@@ -15,12 +15,17 @@ export class AppComponent implements OnInit {
 
   // private nasaApiService: NasaApiService;
   private images = [];
-  private currentImage: INasaImage;
+  private currentImage: INasaImage = {
+    id: 0,
+    sol: 0,
+    camera: '',
+    img_src: '',
+    earth_date: '',
+    rover: ''
+  };
 
   showImage(img: INasaImage) {
-    console.log('Show image: ' + img.id);
     this.currentImage = img;
-    console.log(img);
     document.getElementById('overlay').style.display = 'block';
   }
 
