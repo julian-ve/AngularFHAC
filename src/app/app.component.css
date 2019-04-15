@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 #overlay {
   position: fixed;
   display: none;
@@ -19,7 +23,6 @@
 .overlay_text {
   top: 20%;
   color: white;
-  font-family: sans-serif;
 }
 
 td:first-child {
@@ -41,7 +44,7 @@ td:first-child {
   width: 34%;
 }
 
-.overlay_img {
+.image {
   max-width: 100%;
   max-height: 100%;
 }
@@ -50,4 +53,27 @@ td:first-child {
   content: "";
   display: table;
   clear: both;
+}
+
+div.gallery {
+  margin: 15px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  height: 320px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  transform: scale(1.05);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }

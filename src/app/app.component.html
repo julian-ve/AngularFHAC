@@ -5,13 +5,16 @@
   </h1>
 </div>
 
-<h2>Pictures:</h2>
-<ul *ngFor="let image of images.photos">
-  <li><a (click)="showImage(image);"><img src="{{image.img_src}}"></a></li>
-</ul>
+<div class="preview">
+  <div class="gallery" *ngFor="let image of images.photos" (click)="showImage(image)">
+      <img [src]="image.img_src" style="max-width: 600px" height="400">
+    <div class="desc">{{image.camera.name}}<br>
+    {{image.rover.name}}</div>
+  </div>
+</div>
 
 <div class="row" id="overlay" (click)="hideOverlay()">
-  <div class="column left"><img class="overlay_img" [src]="currentImage.img_src"></div>
+  <div class="column left"><img class="image" [src]="currentImage.img_src"></div>
   <div class="column overlay_text right">
     <table>
       <tr>
