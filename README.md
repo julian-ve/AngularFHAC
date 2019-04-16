@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Navigate to the root folder of the project and execute `npm install`.
 
-##Development
+## Development
 
 ### Development server
 
