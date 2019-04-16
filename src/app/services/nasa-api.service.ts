@@ -14,8 +14,8 @@ export class NasaApiService {
   constructor(private http: HttpClient) { }
 
   public getPicture(earthDate: string, selectedCamera: string): Observable<INasaImage[]> {
-    // console.log('Rufe auf: ' + this.nasaBaseUri + '&earth_date=' + earthDate + 'camera=' + selectedCamera);
-    return this.http.get<INasaImage[]>(this.nasaBaseUri + '&earth_date=' + earthDate + 'camera=' + selectedCamera);
+    // console.log('Rufe auf: ' + this.nasaBaseUri + '&earth_date=' + earthDate + '&camera=' + selectedCamera);
+    return this.http.get<INasaImage[]>(this.nasaBaseUri + '&earth_date=' + earthDate + '&camera=' + selectedCamera);
   }
 
 }

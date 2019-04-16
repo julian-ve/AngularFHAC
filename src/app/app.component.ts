@@ -10,7 +10,7 @@ import {INasaImage} from './INasaImage';
 export class AppComponent implements OnInit {
 
   public dateString = '2019-04-07';
-  public selectedCamera = 'FHAZ';
+  public selectedCamera = 'fhaz';
 
   constructor(private nasaApiService: NasaApiService) {
   }

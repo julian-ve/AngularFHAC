@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Willkommen zu {{ title }}!
   </h1>
 </div>
 
@@ -9,13 +9,13 @@
 
 <div class="options">
   Kamera: <select [(ngModel)]="selectedCamera">
-    <option value="FHAZ">Front Hazard Avoidance Camera</option>
-    <option value="NAVCAM">Navigation Camera</option>
-    <option value="MAST">Mast Camera</option>
-    <option value="CHEMCAM">Chemistry and Camera Complex</option>
-    <option value="MAHLI">Mars Hand Lens Imager</option>
-    <option value="MARDI">Mars Descent Imager</option>
-    <option value="RHAZ">Rear Hazard Avoidance Camera</option>
+    <option value="fhaz">Front Hazard Avoidance Camera</option>
+    <option value="navcam">Navigation Camera</option>
+    <option value="mast">Mast Camera</option>
+    <option value="chemcam">Chemistry and Camera Complex</option>
+    <option value="mahli">Mars Hand Lens Imager</option>
+    <option value="mardi">Mars Descent Imager</option>
+    <option value="rhaz">Rear Hazard Avoidance Camera</option>
   </select>   -   Datum:
   <input type="date" [(ngModel)]="dateString" value="2019-04-07">   -
   <input type="button" value="Go" (click)="showImages()">
@@ -56,5 +56,7 @@
     <i>Dies ist eines von {{currentImage.rover.total_photos}} Fotos von {{currentImage.rover.name}}.</i>
   </div>
 </div>
+
+<div *ngIf="images.photos != null && images.photos.length == 0">Zu dieser Suchanfrage konnten keine Bilder gefunden werden.</div>
 
 <router-outlet></router-outlet>
