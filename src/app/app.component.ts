@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { NasaApiService } from './services/nasa-api.service';
+import {NasaApiService} from './services/nasa-api.service';
 import {INasaImage} from './INasaImage';
 
 @Component({
@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private nasaApiService: NasaApiService) {
   }
+
   title = 'NASA Cameras';
 
   // private nasaApiService: NasaApiService;
@@ -42,7 +43,9 @@ export class AppComponent implements OnInit {
 
   showImages() {
     this.nasaApiService.getPicture(this.dateString, this.selectedCamera)
-      .subscribe(data => { this.images = data; },
+      .subscribe(data => {
+          this.images = data;
+        },
         err => console.log(err),
         () => console.log('Loaded photos from api'));
   }

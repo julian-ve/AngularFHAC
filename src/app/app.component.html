@@ -9,15 +9,15 @@
 
 <div class="options">
   Kamera: <select [(ngModel)]="selectedCamera">
-    <option value="fhaz">Front Hazard Avoidance Camera</option>
-    <option value="navcam">Navigation Camera</option>
-    <option value="mast">Mast Camera</option>
-    <option value="chemcam">Chemistry and Camera Complex</option>
-    <option value="mahli">Mars Hand Lens Imager</option>
-    <option value="mardi">Mars Descent Imager</option>
-    <option value="rhaz">Rear Hazard Avoidance Camera</option>
-  </select>   -   Datum:
-  <input type="date" [(ngModel)]="dateString" value="2019-04-07">   -
+  <option value="fhaz">Front Hazard Avoidance Camera</option>
+  <option value="navcam">Navigation Camera</option>
+  <option value="mast">Mast Camera</option>
+  <option value="chemcam">Chemistry and Camera Complex</option>
+  <option value="mahli">Mars Hand Lens Imager</option>
+  <option value="mardi">Mars Descent Imager</option>
+  <option value="rhaz">Rear Hazard Avoidance Camera</option>
+</select> - Datum:
+  <input type="date" [(ngModel)]="dateString" value="2019-04-07"> -
   <input type="button" value="Go" (click)="showImages()">
 </div>
 
@@ -25,9 +25,10 @@
 
 <div class="preview">
   <div class="gallery" *ngFor="let image of images.photos" (click)="showImage(image)">
-      <img [src]="image.img_src" style="max-width: 600px" height="400">
+    <img [src]="image.img_src" style="max-width: 600px" height="400">
     <div class="desc">{{image.camera.name}}<br>
-    {{image.rover.name}}</div>
+      {{image.rover.name}}
+    </div>
   </div>
 </div>
 
@@ -57,6 +58,8 @@
   </div>
 </div>
 
-<div *ngIf="images.photos != null && images.photos.length == 0">Zu dieser Suchanfrage konnten keine Bilder gefunden werden.</div>
+<div *ngIf="images.photos != null && images.photos.length == 0">Zu dieser Suchanfrage konnten keine Bilder gefunden
+  werden.
+</div>
 
 <router-outlet></router-outlet>

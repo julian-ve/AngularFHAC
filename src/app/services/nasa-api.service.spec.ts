@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { NasaApiService } from './nasa-api.service';
+import {NasaApiService} from './nasa-api.service';
 
 describe('NasaApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
