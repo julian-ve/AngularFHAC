@@ -8,7 +8,7 @@
 <hr>
 
 <div class="options">
-  Kamera: <select>
+  Kamera: <select [(ngModel)]="selectedCamera">
     <option value="FHAZ">Front Hazard Avoidance Camera</option>
     <option value="NAVCAM">Navigation Camera</option>
     <option value="MAST">Mast Camera</option>
@@ -16,8 +16,9 @@
     <option value="MAHLI">Mars Hand Lens Imager</option>
     <option value="MARDI">Mars Descent Imager</option>
     <option value="RHAZ">Rear Hazard Avoidance Camera</option>
-  </select>   |   Datum:
-  <input type="date" value="2019-04-07">
+  </select>   -   Datum:
+  <input type="date" [(ngModel)]="dateString" value="2019-04-07">   -
+  <input type="button" value="Go" (click)="showImages()">
 </div>
 
 <hr>

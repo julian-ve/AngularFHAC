@@ -9,6 +9,9 @@ import {INasaImage} from './INasaImage';
 })
 export class AppComponent implements OnInit {
 
+  public dateString = '2019-04-07';
+  public selectedCamera = 'FHAZ';
+
   constructor(private nasaApiService: NasaApiService) {
   }
   title = 'NASA Cameras';
@@ -34,11 +37,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.showPictures();
+    this.showImages();
   }
 
-  showPictures() {
-    this.nasaApiService.getPicture()
+  showImages() {
+    this.nasaApiService.getPicture(this.dateString, this.selectedCamera)
       .subscribe(data => { this.images = data; },
         err => console.log(err),
         () => console.log('Loaded photos from api'));
